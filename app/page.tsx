@@ -1,91 +1,68 @@
 import Navbar from "@/components/common/navbar";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { socials } from "@/lib/details";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div>
       <Navbar />
-      <div className="max-w-6xl mx-auto">
+      <main className="max-w-4xl mx-auto py-6 space-y-6">
         {/* intro */}
-        <div className="h-[30vh] flex flex-col justify-center items-center text-center">
-          <div className="space-y-5">
-            <h1 className="text-5xl leading-tight">
-              Welcome to my not so{" "}
-              <span className="text-purple-500">
-                <i>regular</i>
-              </span>{" "}
-              portfolio.
-            </h1>
-            <p>
-              Don&apos;t let the bug icon thow you off, lol. Just your regular
-              programmer with a soft touch.
-            </p>
+        <div className=" ">
+          <div className="flex gap-3">
+            <Image
+              width={100}
+              height={100}
+              className="rounded-sm"
+              src={"/dp.jpg"}
+              alt={""}
+            />
+            <div className="space-y-2">
+              <h1 className="font-semibold text-3xl">Jordan.</h1>
+              <p>jordan@twinkle.dev</p>
+              <div className="flex gap-3">
+                {socials.map((social) => {
+                  return (
+                    <Link
+                      className="hover:text-purple-500"
+                      href={social.link}
+                      key={social.key}
+                    >
+                      {social.icon}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
 
-        <section className="mb-12 grid grid-cols-2 gap-6">
-          <Card>
-            <CardContent className="flex justify-center items-center gap-6 py-10">
-              <Image
-                src="/dp.jpg"
-                alt="Jane Doe"
-                width={100}
-                height={100}
-                className="rounded-full"
-              />
-              <div>
-                <p className="">
-                  <span className="text-purple-500">who am i...</span>I&apos;m
-                  an intermediate <i className="text-purple-500">fullstack</i>{" "}
-                  developer.{" "}
-                  <span className="text-purple-500">
-                    I used to be a graphic designer...
-                  </span>
-                  so i have a thing for making really good looking websites.{" "}
-                  <i className="text-purple-500">What about my backend game?</i>{" "}
-                  I enjoy it actually, it can be challenging but i have a couple
-                  years of experience writing some logic
-                  <span className="text-purple-500">
-                    ...reading the docs helps lol.
-                  </span>{" "}
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="flex justify-center gap-4">
-              <Button variant="outline" size="icon" asChild>
-                <a href="mailto:jane@example.com" aria-label="Email">
-                  <Mail className="h-4 w-4" />
-                </a>
-              </Button>
-              <Button variant="outline" size="icon" asChild>
-                <a
-                  href="https://github.com/janedoe"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub"
-                >
-                  <Github className="h-4 w-4" />
-                </a>
-              </Button>
-              <Button variant="outline" size="icon" asChild>
-                <a
-                  href="https://linkedin.com/in/janedoe"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="h-4 w-4" />
-                </a>
-              </Button>
-            </CardContent>
-          </Card>
+        <section className="leading-7">
+          <p className="">
+            Hi, I&apos;m Jordan, a simple developer. I am passionate about
+            combining creativity and logic, hence{" "}
+            <Link href={""} className="italic text-purple-500">
+              my favourite tool
+            </Link>
+            . From a young age, I was captivated by{" "}
+            <Link href={""} className="italic text-purple-500">
+              cartoons
+            </Link>{" "}
+            and games, but sadly i cant watch as much i used to. Over the years,
+            i worked on several projects, some of which really helped me grow as
+            a developer. I really love leaning{" "}
+            <Link href={""} className="italic text-purple-500">
+              new things,
+            </Link>{" "}
+            and sharing my knowledge with others. I want my work to not only
+            showcase my skills but also inspire fellow developers and help them
+            grow. If you&apos;re looking for someone who loves a good challenge
+            and enjoys collaboration, I&apos;m excited to connect and make
+            something amazing together.
+          </p>
         </section>
-      </div>
+      </main>
     </div>
   );
 }

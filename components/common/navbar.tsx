@@ -1,6 +1,6 @@
 "use client";
 
-import { Bug, Moon, Sun } from "lucide-react";
+import { Moon, Sun, Terminal } from "lucide-react";
 import { Button } from "../ui/button";
 import { useEffect, useState } from "react";
 
@@ -18,10 +18,10 @@ export default function Navbar() {
   return (
     <>
       <header className="border-b border-border p-4">
-        <div className="container max-w-6xl mx-auto flex justify-between items-center">
-          <h1 className="text-2xl  flex justify-center items-center gap-3">
-            <Bug className="text-purple-500" />
-            jordan.dev
+        <div className="container max-w-4xl mx-auto flex justify-between items-center">
+          <h1 className="flex justify-center items-center gap-3">
+            <Terminal className="text-purple-500" />
+            twinkle.toez
           </h1>
           <div className="flex gap-3">
             <Button variant="outline" size="icon" onClick={toggleTheme}>
