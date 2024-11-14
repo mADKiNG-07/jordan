@@ -3,6 +3,7 @@
 import { Moon, Sun, Terminal } from "lucide-react";
 import { Button } from "../ui/button";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [theme, setTheme] = useState("dark");
@@ -19,12 +20,25 @@ export default function Navbar() {
     <>
       <header className="border-b border-border p-4">
         <div className="container max-w-4xl mx-auto flex justify-between items-center">
-          <h1 className="flex justify-center items-center gap-3">
-            <Terminal className="text-purple-500" />
-            twinkle.toez
-          </h1>
+          <div className="flex justify-center items-center gap-6">
+            <Link href={"/"}>
+              <h1 className="flex justify-center items-center text-purple-500">
+                <Terminal className="" />
+                twinkle.toez
+              </h1>
+            </Link>
+            <div>
+              <Link href={"/tools"}>Tools</Link>
+            </div>
+          </div>
+
           <div className="flex gap-3">
-            <Button variant="outline" size="icon" onClick={toggleTheme}>
+            <Button
+              variant="outline"
+              size="icon"
+              className="rounded-full"
+              onClick={toggleTheme}
+            >
               {theme === "light" ? (
                 <Moon className="h-[1.2rem] w-[1.2rem]" />
               ) : (
