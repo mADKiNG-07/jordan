@@ -13,10 +13,9 @@ export default function Page() {
           <h1 className="font-medium text-2xl ">Tools</h1>
           <p className="leading-7">
             {" "}
-            My primary stack includes NextJS, Typescript and PHP, but I have
-            used a variety of other languages and tools over the years out of
-            necessity or out of curiosity. Here are some of the tools I have
-            used and am comfortable with.
+            My primary stack is Typescript, but I have used a variety of other
+            languages and tools over the years, like JAVA and C#. Here are some
+            of the tools I have used and am comfortable with.
           </p>
         </section>
       </main>
