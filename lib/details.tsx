@@ -3,12 +3,12 @@ import { Github, Linkedin, Rss, Twitch, Twitter } from "lucide-react";
 export const socials = [
   {
     icon: <Github key="github" size={15} />,
-    link: "",
+    link: "https://github.com/mADKiNG-07",
     key: "github",
   },
   {
     icon: <Twitter key="twitter" size={15} />,
-    link: "",
+    link: "https://x.com/mAD_KvNG",
     key: "twitter",
   },
   {
@@ -18,7 +18,7 @@ export const socials = [
   },
   {
     icon: <Linkedin key="linkedin" size={15} />,
-    link: "",
+    link: "https://www.linkedin.com/in/williams-jordan-55397b211/",
     key: "linkedin",
   },
   {
