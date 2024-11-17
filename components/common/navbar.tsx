@@ -28,6 +28,12 @@ export default function Navbar() {
               </h1>
             </Link>
             <div>
+              <Link href={"/tools"}>Blog</Link>
+            </div>
+            <div>
+              <Link href={"/tools"}>Projects</Link>
+            </div>
+            <div>
               <Link href={"/tools"}>Tools</Link>
             </div>
           </div>
