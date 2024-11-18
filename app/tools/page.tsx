@@ -19,7 +19,7 @@ export default function Page() {
         have used and am comfortable with.
       </p>
 
-      <div className="h-6" />
+      <div className="h-5" />
 
       <div className="lg:grid lg:grid-cols-2 gap-4">
         {tools.map((tool) => (
@@ -29,7 +29,9 @@ export default function Page() {
               <CardTitle className="font-medium text-2xl">
                 {tool.title}
               </CardTitle>
-              <CardDescription>{tool.description}</CardDescription>
+              <CardDescription className="leading-7">
+                {tool.description}
+              </CardDescription>
             </CardHeader>
           </Card>
         ))}

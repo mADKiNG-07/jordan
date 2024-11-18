@@ -53,3 +53,16 @@ export const tools = [
     logo: "/flutter.svg",
   },
 ];
+
+export const projects = [
+  {
+    id: 1,
+    title: "Suwk Africa",
+    description:
+      "A full-stack platform that provides young people from low-income communities with valuable trade skills",
+    languages: ["Next JS", "Firebase"],
+
+    githubUrl: "",
+    link: "https://www.suwkafrica.com/",
+  },
+];
