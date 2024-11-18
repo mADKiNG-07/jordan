@@ -31,7 +31,7 @@ export default function Navbar() {
               <Link href={"/tools"}>Blog</Link>
             </div>
             <div>
-              <Link href={"/tools"}>Projects</Link>
+              <Link href={"/projects"}>Projects</Link>
             </div>
             <div>
               <Link href={"/tools"}>Tools</Link>
