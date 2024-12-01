@@ -65,4 +65,13 @@ export const projects = [
     githubUrl: "",
     link: "https://www.suwkafrica.com/",
   },
+  {
+    id: 1,
+    title: "Suwk Work",
+    description: "A web application that would connect talent with employers",
+    languages: ["Next JS", "MongoDB"],
+
+    githubUrl: "",
+    link: "https://www.coming-soon.com/",
+  },
 ];
