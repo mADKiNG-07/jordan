@@ -23,7 +23,7 @@ export default function Page() {
       </p>
 
       <div className="h-5" />
-      {/*  */}
+      {/* hello world */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
           <Card key={project.id} className="flex flex-col">
